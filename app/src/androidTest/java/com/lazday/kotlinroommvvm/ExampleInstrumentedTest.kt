@@ -1,4 +1,4 @@
-package com.lazday.kotlinroommvvm
+package com.lazday.catatan
 
 import androidx.test.platform.app.InstrumentationRegistry
 import androidx.test.ext.junit.runners.AndroidJUnit4
