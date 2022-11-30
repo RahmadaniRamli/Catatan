@@ -4,22 +4,28 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".activity.EditActivity">
+    tools:context=".activity.EditActivity"
+    android:background="@color/black1">
 
     <EditText
         android:id="@+id/edit_title"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:hint="Judul"
+        android:textColor="@color/textwhite"
+        android:textColorHint="@color/textabu"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         />
+
     <EditText
         android:id="@+id/edit_note"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:hint="Tulis Catatan"
+        android:hint="Catatan"
+        android:textColor="@color/textwhite"
+        android:textColorHint="@color/textabu"
         android:minLines="3"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -27,25 +33,35 @@
         android:layout_marginTop="10dp"
         android:gravity="top"
         />
+
     <Button
         android:id="@+id/button_save"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:text="SAVE"
-        app:layout_constraintStart_toStartOf="parent"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:layout_marginTop="444dp"
+        android:background="@color/black1"
+        android:text="Simpan"
+        android:textAllCaps="false"
+        android:textColor="@color/textwhite"
+        android:textSize="20dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/edit_note"
-        android:layout_marginTop="20dp"
-        />
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/edit_note" />
+
     <Button
         android:id="@+id/button_update"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:text="UPDATE"
-        app:layout_constraintStart_toStartOf="parent"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:layout_marginTop="516dp"
+        android:background="@color/black1"
+        android:text="Edit"
+        android:textAllCaps="false"
+        android:textColor="@color/textwhite"
+        android:textSize="20dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button_save"
-        android:layout_marginTop="20dp"
-        />
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/edit_note" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
