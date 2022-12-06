@@ -1,8 +1,8 @@
-package com.lazday.kotlinroommvvm.activity
+package com.example.CatatanApp.activity
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import com.lazday.kotlinroommvvm.R
+import com.example.CatatanApp.R
 
 class EditActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {

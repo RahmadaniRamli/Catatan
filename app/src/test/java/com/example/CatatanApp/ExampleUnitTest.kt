@@ -1,4 +1,4 @@
-package com.lazday.kotlinroommvvm
+package com.example.CatatanApp
 
 import org.junit.Test
 
