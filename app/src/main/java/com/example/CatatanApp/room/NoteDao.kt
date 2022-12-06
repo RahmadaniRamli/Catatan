@@ -1,4 +1,4 @@
-package com.lazday.kotlinroommvvm.room
+package com.example.CatatanApp.room
 
 import androidx.room.*
 

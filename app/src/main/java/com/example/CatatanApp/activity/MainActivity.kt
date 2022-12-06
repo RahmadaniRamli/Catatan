@@ -1,9 +1,9 @@
-package com.lazday.kotlinroommvvm.activity
+package com.example.CatatanApp.activity
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import com.lazday.kotlinroommvvm.R
+import com.example.CatatanApp.R
 import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
