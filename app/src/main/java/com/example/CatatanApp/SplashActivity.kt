@@ -7,7 +7,6 @@ import android.os.Handler
 import com.example.CatatanApp.activity.MainActivity
 
 class SplashActivity : AppCompatActivity() {
-
     private val SPLASH_TIME: Long = 3000
 
     override fun onCreate(savedInstanceState: Bundle?) {
