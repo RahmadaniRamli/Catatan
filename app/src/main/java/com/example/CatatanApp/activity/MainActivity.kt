@@ -24,7 +24,7 @@ import kotlinx.coroutines.withContext
 
 class MainActivity : AppCompatActivity() {
 
-    val db by lazy { NoteDB(this)}
+    val db by lazy { NoteDB(this) }
     lateinit var noteAdapter: NoteAdapter
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -39,11 +39,11 @@ class MainActivity : AppCompatActivity() {
         loadNote()
     }
 
-    fun loadNote(){
+    fun loadNote() {
         CoroutineScope(Dispatchers.IO).launch {
             val notes = db.noteDao().getNotes()
-            Log.d("MainActivity","dbResponse: $notes")
-            withContext(Dispatchers.Main){
+            Log.d("MainActivity", "dbResponse: $notes")
+            withContext(Dispatchers.Main) {
                 noteAdapter.setData(notes)
             }
         }
@@ -51,13 +51,12 @@ class MainActivity : AppCompatActivity() {
 
     //Edit
     fun setupListener() {
-        button_create.setOnClickListener{
-            intentEdit(0,Constant.TYPE_CREATE)
-
+        button_create.setOnClickListener {
+            intentEdit(0, Constant.TYPE_CREATE)
         }
     }
 
-    fun intentEdit(noteId: Int, intentType: Int){
+    fun intentEdit(noteId: Int, intentType: Int) {
         startActivity(
             Intent(applicationContext, EditActivity::class.java)
                 .putExtra("intent_id", noteId)
@@ -66,16 +65,16 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun setupRecyclerView() {
-        noteAdapter = NoteAdapter(arrayListOf(), object : NoteAdapter.OnAdapterListener{
+        noteAdapter = NoteAdapter(arrayListOf(), object : NoteAdapter.OnAdapterListener {
             //Read
             override fun onClick(note: Note) {
-                Toast.makeText(applicationContext,note.title, Toast.LENGTH_SHORT).show()
-                intentEdit(note.id,Constant.TYPE_READ)
+                Toast.makeText(applicationContext, note.title, Toast.LENGTH_SHORT).show()
+                intentEdit(note.id, Constant.TYPE_READ)
             }
 
             //Update
             override fun onUpdate(note: Note) {
-                intentEdit(note.id,Constant.TYPE_UPDATE)
+                intentEdit(note.id, Constant.TYPE_UPDATE)
             }
 
             //Delete
@@ -91,7 +90,7 @@ class MainActivity : AppCompatActivity() {
     }
 
     //AlertDialog untuk konfirmasi hapus
-    private fun deleteDialog(note:Note) {
+    private fun deleteDialog(note: Note) {
         val alertDialog = AlertDialog.Builder(this, R.style.MyAlertDialogStyle)
         alertDialog.apply {
             setTitle("Konfirmasi")

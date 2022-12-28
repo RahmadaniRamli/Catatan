@@ -15,7 +15,6 @@ abstract class NoteDB : RoomDatabase(){
     abstract fun noteDao() : NoteDao
 
     companion object {
-
         @Volatile private var instance : NoteDB? = null
         private val LOCK = Any()
 
